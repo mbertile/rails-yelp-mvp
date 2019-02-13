@@ -1,0 +1,11 @@
+<h1 class="text-center">--- SUPER YELP! ---</h1>
+
+<h1 class="text-center">My list of restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+  <h2 class="text-center"><%= link_to restaurant.name, restaurant_path(restaurant.id) %></h2>
+<% end %>
+
+<div class="btn btn-danger" id="text-center">
+<%= link_to "Add a new restaurant", new_restaurant_path(@restaurant), :class => "btn" %>
+</div>
+
